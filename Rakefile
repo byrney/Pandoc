@@ -13,3 +13,9 @@ end
 
 task :default => ['out', output]
 
+task :bundle do
+     system("bundle", "check") || system("bundle", "install")
+end
+
+desc 'first time only setup tasks'
+task :setup => [:bundle]
