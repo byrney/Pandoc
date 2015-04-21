@@ -52,3 +52,39 @@ There are several options
 My favourite is option @b.
 
 
+---------------------------------------------------------------------
+Layer            Description
+---------------- ----------------------------------------------------
+Logging          Log basic information about request using
+(server)         Standard logging
+
+Authentication   Use Windows auth to authenticate the connected user.
+(server)         Check that user is peermitted to connect on behalf of
+                 Client
+
+Encoding         Compress response according to callers Accept header
+(server)         gzip/deflate etc
+
+Routing          Extract URL components and dispatch
+(server)
+
+Engine           Database Access
+(server)
+
+PG-Pool          Distribute database calls to appropriate server/schema
+(Pg-pool)
+
+PG               Postgres Database, sharded based on client
+(database)
+---------------------------------------------------------------------
+
+
+Position Calculations
+---------------------
+
+---------------------------------------------------------------------
+trade_date      version_from    version_to      position
+----------      -----------     ----------      --------
+x               y               z               77
+---------------------------------------------------------------------
+
